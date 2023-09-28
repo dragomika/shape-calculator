@@ -1,24 +1,13 @@
 package ro.scoalainformala.shapes.domain;
 
-public class Square {
+public class Square extends Rectangle {
+
     private double length;
+   public Square(double side) {
+       super(side, side);
+   }
 
-    public Square(double length) {
-        this.length = length;
-
-    }
-
-    public void setLength(double length) {
-        if (length > 0) {
-            this.length = length;
-        }
-    }
-
-    public double calculatePerimeter() {
+    public double getPerimeter() {
         return length * 4;
-    }
-
-    public double calculateArea() {
-        return length * length;
     }
 }

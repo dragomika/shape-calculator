@@ -1,6 +1,6 @@
 package ro.scoalainformala.shapes.domain;
 
-public class Rectangle {
+public class Rectangle extends Shape {
     private double length;
     private double width;
 
@@ -20,11 +20,13 @@ public class Rectangle {
         }
     }
 
-    public double calculatePerimeter() {
+    @Override
+    public double getPerimeter() {
         return (length + width) * 2;
     }
 
-    public double calculateArea() {
+    @Override
+    public double getArea() {
         return length * width;
     }
 }

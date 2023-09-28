@@ -1,8 +1,7 @@
 package ro.scoalainformala.shapes.domain;
 
-import java.util.Scanner;
 
-public class Triangle {
+public class Triangle extends Shape {
 
     private double sideA;
     private double sideB;
@@ -24,12 +23,14 @@ public class Triangle {
         }
     }
 
-    public double calculatePerimeter() {
+    @Override
+    public double getPerimeter() {
         return sideA + sideB + sideC;
     }
 
-    public double calculateArea() {
-        double sp = calculatePerimeter() / 2;
+    @Override
+    public double getArea() {
+        double sp = getPerimeter() / 2;
         return Math.sqrt(sp * (sp - sideA) * (sp - sideB) * (sp - sideC));
     }
 }
